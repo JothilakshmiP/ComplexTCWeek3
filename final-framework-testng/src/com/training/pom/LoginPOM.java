@@ -13,13 +13,13 @@ public class LoginPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(id="login")
+	@FindBy(id="cyclosUsername")
 	private WebElement userName; 
 	
-	@FindBy(id="password")
+	@FindBy(id="cyclosPassword")
 	private WebElement password;
 	
-	@FindBy(id="formLogin_submitAuth")
+	@FindBy(xpath="/html/body/div/div/div/div[2]/table/tbody/tr[1]/td[1]/table/tbody/tr/td[2]/form/table/tbody/tr[3]/td/input")
 	private WebElement loginBtn; 
 	
 	public void sendUserName(String userName) {

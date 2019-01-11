@@ -48,8 +48,9 @@ public class LoginTests {
 	@Test
 	public void validLoginTest() {
 		loginPOM.sendUserName("admin");
-		loginPOM.sendPassword("admin@123");
+		loginPOM.sendPassword("12345");
+		screenShot.captureScreenShot("CYTC_002_First");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("First");
+		screenShot.captureScreenShot("CYTC_002_Second");
 	}
 }
