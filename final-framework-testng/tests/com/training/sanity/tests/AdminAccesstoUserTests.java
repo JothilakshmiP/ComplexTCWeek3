@@ -50,7 +50,7 @@ public class AdminAccesstoUserTests {
 	public void validLoginTest() throws InterruptedException {
 		adminAccesstoUserPOM.sendUserName("admin");
 		adminAccesstoUserPOM.sendPassword("12345");
-		screenShot.captureScreenShot("CYTC_003_First");
+		screenShot.captureScreenShot("CYTC_003_First");	
 		adminAccesstoUserPOM.clickLoginBtn(); 
 		screenShot.captureScreenShot("CYTC_003_Second");
 		adminAccesstoUserPOM.sendMemberLogin("manzoor");
@@ -61,7 +61,8 @@ public class AdminAccesstoUserTests {
 		adminAccesstoUserPOM.sendComments("full access to the member");
 		screenShot.captureScreenShot("CYTC_003_Fifth");
 		adminAccesstoUserPOM.clickMbrGroupBtn();
-		screenShot.captureScreenShot("CYTC_003_Sixth");
+		screenShot.captureScreenShot();
 		adminAccesstoUserPOM.acceptChangeGroup();
+		screenShot.captureScreenShot();
 	}
 }

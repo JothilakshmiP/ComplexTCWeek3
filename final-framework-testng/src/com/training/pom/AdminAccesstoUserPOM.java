@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class AdminAccesstoUserPOM {
 	private WebDriver driver; 
@@ -80,7 +81,10 @@ public class AdminAccesstoUserPOM {
 	
 	public void acceptChangeGroup(){
 		Alert alert = driver.switchTo().alert();
+		String alertMessage = alert.getText();
 		alert.accept();
+		String expected = "The member's group was changed";
+		Assert.assertEquals(expected, alertMessage);
 	}
 	
 	

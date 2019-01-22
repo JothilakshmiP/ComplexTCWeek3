@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class ModifyMemberProfilePOM {
 	private WebDriver driver; 
@@ -68,6 +69,9 @@ public class ModifyMemberProfilePOM {
 	
 	public void profileModAlert() {
 		Alert alert = driver.switchTo().alert();
+		String alrtMsg = alert.getText();
 		alert.accept();
+		String exptdMsg = "Profile modified";
+		Assert.assertEquals(exptdMsg, alrtMsg);
 	}
 }

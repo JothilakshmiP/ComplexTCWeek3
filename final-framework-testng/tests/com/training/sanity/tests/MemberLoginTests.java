@@ -49,6 +49,7 @@ public class MemberLoginTests {
 	public void validLoginTest() {
 		loginPOM.sendUserName("manzoor");
 		loginPOM.sendPassword("manzoor");
+		screenShot.captureScreenShot("CYTC_004_First");	
 		loginPOM.clickLoginBtn(); 
 		screenShot.captureScreenShot("First");
 	}
