@@ -1,29 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33421" started-at="2019-01-22T05:24:35Z" finished-at="2019-01-22T05:25:08Z">
+  <suite name="Default suite" duration-ms="43476" started-at="2019-02-01T06:07:38Z" finished-at="2019-02-01T06:08:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33421" started-at="2019-01-22T05:24:35Z" finished-at="2019-01-22T05:25:08Z">
-      <class name="com.training.sanity.tests.AdverAddTests">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.AdverAddTests@482f8f11]" name="setUpBeforeClass" is-config="true" duration-ms="16" started-at="2019-01-22T10:54:35Z" finished-at="2019-01-22T10:54:35Z">
+    <test name="Default test" duration-ms="43476" started-at="2019-02-01T06:07:38Z" finished-at="2019-02-01T06:08:22Z">
+      <class name="com.training.sanity.tests.AdminAccesstoMultipleUsersTests">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="setUpBeforeClass" is-config="true" duration-ms="10" started-at="2019-02-01T11:37:38Z" finished-at="2019-02-01T11:37:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.AdverAddTests@482f8f11]" name="setUp" is-config="true" duration-ms="16122" started-at="2019-01-22T10:54:35Z" finished-at="2019-01-22T10:54:51Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="setUp" is-config="true" duration-ms="7622" started-at="2019-02-01T11:37:39Z" finished-at="2019-02-01T11:37:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="adverAddTest()[pri:0, instance:com.training.sanity.tests.AdverAddTests@482f8f11]" name="adverAddTest" duration-ms="14805" started-at="2019-01-22T10:54:51Z" finished-at="2019-01-22T10:55:06Z">
+        <test-method status="PASS" signature="validLoginTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="validLoginTest" duration-ms="4755" started-at="2019-02-01T11:37:47Z" data-provider="excel-inputs-TC5" finished-at="2019-02-01T11:37:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Indra]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[full access to member]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- adverAddTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.AdverAddTests@482f8f11]" name="tearDown" is-config="true" duration-ms="2456" started-at="2019-01-22T10:55:06Z" finished-at="2019-01-22T10:55:08Z">
+        </test-method> <!-- validLoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="tearDown" is-config="true" duration-ms="1812" started-at="2019-02-01T11:37:51Z" finished-at="2019-02-01T11:37:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.AdverAddTests -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="setUp" is-config="true" duration-ms="7510" started-at="2019-02-01T11:37:53Z" finished-at="2019-02-01T11:38:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validLoginTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="validLoginTest" duration-ms="5231" started-at="2019-02-01T11:38:01Z" data-provider="excel-inputs-TC5" finished-at="2019-02-01T11:38:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ekta]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[full access to member]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="tearDown" is-config="true" duration-ms="1761" started-at="2019-02-01T11:38:06Z" finished-at="2019-02-01T11:38:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="setUp" is-config="true" duration-ms="7485" started-at="2019-02-01T11:38:08Z" finished-at="2019-02-01T11:38:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validLoginTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="validLoginTest" duration-ms="4771" started-at="2019-02-01T11:38:15Z" data-provider="excel-inputs-TC5" finished-at="2019-02-01T11:38:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Harini]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[full access to member]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.AdminAccesstoMultipleUsersTests@1593948d]" name="tearDown" is-config="true" duration-ms="1777" started-at="2019-02-01T11:38:20Z" finished-at="2019-02-01T11:38:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.AdminAccesstoMultipleUsersTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,18 +1,30 @@
 package com.training.pom;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
-public class RegisterPOM {
+public class ComplexRegisterPOM {
 	private WebDriver driver; 
 	
-	public RegisterPOM(WebDriver driver) {
+	public ComplexRegisterPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(id="cyclosUsername")
+	private WebElement userName; 
+	
+	@FindBy(id="cyclosPassword")
+	private WebElement password;
+	
+	@FindBy(xpath="/html/body/div/div/div/div[2]/table/tbody/tr[1]/td[1]/table/tbody/tr/td[2]/form/table/tbody/tr[3]/td/input")
+	private WebElement loginBtn; 
 	
 	@FindBy(xpath="/html/body/div/div/div/div[2]/table/tbody/tr[1]/td[3]/div/input")
 	private WebElement loginButton;
@@ -29,16 +41,11 @@ public class RegisterPOM {
 	@FindBy(xpath="//*[@type='text' and @fieldname='birthday']")
 	private WebElement dateOfBirth;
 	
-//	@FindBy(css="td:nth-child(4) > label")
 	@FindBy(xpath="//td[2]/table/tbody/tr/td[3]/input")
 	private WebElement genderMale;
 	
-//	@FindBy(xpath="//table/tbody/tr/td[2]/label")
 	@FindBy(xpath="//td[2]/table/tbody/tr/td/input")
 	private WebElement genderFemale;
-
-//	@FindBy(css="td:nth-child(2) > label")
-//	private WebElement genderFemale;
 	
 	@FindBy(xpath="/html/body/div[1]/div/div/div[2]/div/form/table[1]/tbody/tr[2]/td/table/tbody/tr[6]/td[2]/input[3]")
 	private WebElement address;
@@ -49,11 +56,11 @@ public class RegisterPOM {
 	@FindBy(xpath="/html/body/div[1]/div/div/div[2]/div/form/table[1]/tbody/tr[2]/td/table/tbody/tr[8]/td[2]/input[3]")
 	private WebElement city;
 	
-//	@FindBy(xpath="/html/body/div[1]/div/div/div[2]/div/form/table[1]/tbody/tr[2]/td/table/tbody/tr[9]/td[2]/select/option[2]")
-//	private WebElement selectArea;
+	@FindBy(xpath="/html/body/div[1]/div/div/div[2]/div/form/table[1]/tbody/tr[2]/td/table/tbody/tr[9]/td[2]/select/option[2]")
+	private WebElement selectArea;
 	
-//	@FindBy(id="custom_field_select_6")
-//	private WebElement areaText;
+	@FindBy(id="custom_field_select_6")
+	private WebElement areaText;
 	
 	@FindBy(xpath="/html/body/div[1]/div/div/div[2]/div/form/table[1]/tbody/tr[2]/td/table/tbody/tr[10]/td[2]/input[3]")
 	private WebElement phoneNumber;
@@ -68,7 +75,7 @@ public class RegisterPOM {
 	private WebElement url;
 	
 	@FindBy(name="member(user).password")
-	private WebElement password;
+	private WebElement newPassword;
 	
 	@FindBy(name="confirmPassword")
 	private WebElement confirmPassword;
@@ -76,10 +83,20 @@ public class RegisterPOM {
 	@FindBy(id="saveButton")
 	private WebElement submitButton;
 	
-	@FindBy(tagName="title")
-	private WebElement title;
+	@FindBy(id="memberUsername")
+	private WebElement memberLogin;
 	
+	@FindBy(xpath="/html/body/div[2]/div/div/div/div[3]/table[1]/tbody/tr[2]/td/table/tbody/tr[2]/td/fieldset/table/tbody/tr[1]/td[4]/input")
+	private WebElement prmngrpSubmitBtn;
 	
+	@FindBy(name="comments")
+	private WebElement comments;
+	
+	@FindBy(xpath="/html/body/div[2]/div/div/div/div[3]/form/table[1]/tbody/tr[2]/td/table/tbody/tr[4]/td/input")
+	private WebElement mbrGroupBtn;
+	
+	@FindBy(xpath="/html/body/div[2]/div/div/div/div[2]/ul/li[16]/span[2]")
+	private WebElement logoutBtn;
 	
 	public void sendLoginName(String loginName) {
 		this.loginName.clear();
@@ -89,7 +106,6 @@ public class RegisterPOM {
 	public void sendfullName(String fullName) {
 		this.fullName.clear();
 		this.fullName.sendKeys(fullName);
-		driver.findElement(By.tagName("title"));
 	}
 	
 	public void sendEmail(String email) {
@@ -137,9 +153,9 @@ public class RegisterPOM {
 		this.url.sendKeys(url);
 	}
 	
-	public void sendPassword(String password) {
-		this.password.clear();
-		this.password.sendKeys(password);
+	public void newSendNewPassword(String newPassword) {
+		this.newPassword.clear();
+		this.newPassword.sendKeys(newPassword);
 	}
 	
 	public void sendConfirmPassword(String confirmPassword) {
@@ -160,13 +176,67 @@ public class RegisterPOM {
 		}
 	}
 	
-/*	public void selectArea(){
+	public void selectArea(){
 		this.selectArea.click();
 	}
-*/
 	
-	public void clickSubmit() throws InterruptedException{
-		Thread.sleep(10000);
+	public void clickSubmit(){
 		this.submitButton.click();
-		}
+	}
+	
+	public void sendUserName(String userName) {
+		this.userName.clear();
+		this.userName.sendKeys(userName);
+	}
+	
+	public void sendPassword(String password) {
+		this.password.clear(); 
+		this.password.sendKeys(password); 
+	}
+	
+	public void clickLoginBtn() {
+		this.loginBtn.click(); 
+	}
+	
+	public void sendMemberLogin(String memberLogin) throws InterruptedException{
+		this.memberLogin.clear();
+		this.memberLogin.sendKeys(memberLogin);
+		
+	}
+	
+	public void prmngrpSubmitBtn() {
+		this.prmngrpSubmitBtn.click(); 
+	}
+	
+	public void selectNewGroupId(){
+		Select newGroupId = new Select(driver.findElement(By.name("newGroupId")));
+		newGroupId.selectByValue("5");
+		//	newGroupId.selectByVisibleText("Full members");
+	}
+	
+	public void sendComments(String comments){
+		this.comments.clear();
+		this.comments.sendKeys(comments);
+	}
+	
+	public void clickMbrGroupBtn(){
+		this.mbrGroupBtn.click();
+	}
+	
+	public void acceptChangeGroup(){
+		Alert alert = driver.switchTo().alert();
+		String alertMessage = alert.getText();
+		alert.accept();
+		String expected = "The member's group was changed";
+		Assert.assertEquals(expected, alertMessage);
+	}
+	
+	public void clickLogout(){
+		this.logoutBtn.click();
+		Alert alert1 = driver.switchTo().alert();
+		String alertMessage = alert1.getText();
+		alert1.accept();
+		
+		
+	}
 }

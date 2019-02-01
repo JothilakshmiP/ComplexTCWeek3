@@ -5,15 +5,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class AdminAccesstoUserPOM {
+public class AdminAccesstoMultipleUsersPOM {
 	private WebDriver driver; 
 	
-	public AdminAccesstoUserPOM(WebDriver driver) {
+	public AdminAccesstoMultipleUsersPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
@@ -30,7 +31,7 @@ public class AdminAccesstoUserPOM {
 	@FindBy(id="memberUsername")
 	private WebElement memberLogin;
 	
-	@FindBy(xpath="/html/body/div[2]/div/div/div/div[3]/table[1]/tbody/tr[2]/td/table/tbody/tr[2]/td/fieldset/table/tbody/tr[2]/td[2]/input")
+	@FindBy(xpath="/html/body/div[2]/div/div/div/div[3]/table[1]/tbody/tr[2]/td/table/tbody/tr[2]/td/fieldset/table/tbody/tr[1]/td[4]/input")
 	private WebElement prmngrpSubmitBtn;
 	
 	@FindBy(name="comments")
@@ -56,9 +57,13 @@ public class AdminAccesstoUserPOM {
 		this.loginBtn.click(); 
 	}
 	
-	public void sendMemberLogin(String memberLogin) {
+	public void sendMemberLogin(String memberLogin) throws InterruptedException {
 		this.memberLogin.clear();
 		this.memberLogin.sendKeys(memberLogin);
+//		Thread.sleep(2000);
+//		this.memberLogin.sendKeys(Keys.ENTER);
+//		Actions action = new Actions(driver);
+//		action.moveToElement(this.memberLogin).click();
 		
 	}
 	
@@ -92,6 +97,5 @@ public class AdminAccesstoUserPOM {
 	public void clickAdminHome(){
 		this.adminHome.click();
 	}
-	
 	
 }

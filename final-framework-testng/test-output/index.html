@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\JothilakshmiP\AppData\Local\Temp\testng-eclipse--670520641\testng-customsuite.xml</span>
+                    <span>C:\Users\JothilakshmiP\AppData\Local\Temp\testng-eclipse--1031119719\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.training.sanity.tests.AdverAddTests" hash-for-method="adverAddTest">adverAddTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.training.sanity.tests.AdminAccesstoMultipleUsersTests" hash-for-method="validLoginTest(admin, 12345, Indra, full access to member)">validLoginTest(admin, 12345, Indra, full access to member)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.training.sanity.tests.AdminAccesstoMultipleUsersTests" hash-for-method="validLoginTest(admin, 12345, Harini, full access to member)">validLoginTest(admin, 12345, Harini, full access to member)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.training.sanity.tests.AdminAccesstoMultipleUsersTests" hash-for-method="validLoginTest(admin, 12345, Ekta, full access to member)">validLoginTest(admin, 12345, Ekta, full access to member)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +130,31 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.training.sanity.tests.AdverAddTests</span>
+              <span class="class-name">com.training.sanity.tests.AdminAccesstoMultipleUsersTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="adverAddTest">
-                  </a> <!-- adverAddTest -->
-                  <span class="method-name">adverAddTest</span>
+                  <a name="validLoginTest(admin, 12345, Indra, full access to member)">
+                  </a> <!-- validLoginTest(admin, 12345, Indra, full access to member) -->
+                  <span class="method-name">validLoginTest</span>
+                  <span class="parameters">(admin, 12345, Indra, full access to member)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest(admin, 12345, Harini, full access to member)">
+                  </a> <!-- validLoginTest(admin, 12345, Harini, full access to member) -->
+                  <span class="method-name">validLoginTest</span>
+                  <span class="parameters">(admin, 12345, Harini, full access to member)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest(admin, 12345, Ekta, full access to member)">
+                  </a> <!-- validLoginTest(admin, 12345, Ekta, full access to member) -->
+                  <span class="method-name">validLoginTest</span>
+                  <span class="parameters">(admin, 12345, Ekta, full access to member)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +162,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\JothilakshmiP\AppData\Local\Temp\testng-eclipse--670520641\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\JothilakshmiP\AppData\Local\Temp\testng-eclipse--1031119719\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +171,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.training.sanity.tests.AdverAddTests&quot;/&gt;
+      &lt;class name=&quot;com.training.sanity.tests.AdminAccesstoMultipleUsersTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -184,11 +211,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'adverAddTest')
-data.setCell(0, 2, 'com.training.sanity.tests.AdverAddTests')
-data.setCell(0, 3, 14805);
+data.setCell(0, 1, 'validLoginTest')
+data.setCell(0, 2, 'com.training.sanity.tests.AdminAccesstoMultipleUsersTests')
+data.setCell(0, 3, 5231);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validLoginTest')
+data.setCell(1, 2, 'com.training.sanity.tests.AdminAccesstoMultipleUsersTests')
+data.setCell(1, 3, 4771);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validLoginTest')
+data.setCell(2, 2, 'com.training.sanity.tests.AdminAccesstoMultipleUsersTests')
+data.setCell(2, 3, 4755);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -219,22 +254,46 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.AdverAddTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.AdminAccesstoMultipleUsersTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpBeforeClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">25 ms</span>
+                <span class="method-start">735 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">adverAddTest</span>
-                <span class="method-start">16147 ms</span>
+                <span class="method-name">validLoginTest(admin, 12345, Indra, full access to member)</span>
+                <span class="method-start">8357 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">30953 ms</span>
+                <span class="method-start">13114 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">14926 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validLoginTest(admin, 12345, Ekta, full access to member)</span>
+                <span class="method-start">22436 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">27668 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">29429 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validLoginTest(admin, 12345, Harini, full access to member)</span>
+                <span class="method-start">36914 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">41687 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
